@@ -36,7 +36,9 @@
 
 				<TextBox Watermark="Artikel"
 						 HorizontalAlignment="Left"
-						 VerticalAlignment="Bottom"/>
+						 VerticalAlignment="Bottom"
+						 MaxLength="3"/>
+						 
 
 				<TextBox Watermark="Plural"
 						 HorizontalAlignment="Right"
