@@ -11,6 +11,37 @@
 			CornerRadius="100"
 			PointerPressed="Border_PointerPressed">
 		
+		<Grid RowDefinitions="*,2*,*">
+			
+			<Label Grid.Row="0"
+				   Width="140" Height="70"
+				   Content="Hallo!"
+				   FontSize="50"
+				   VerticalAlignment="Center"
+				   HorizontalAlignment="Center"/>
+
+			<Grid Grid.Row="1"
+				  Width="350"
+				  Height="120"
+				  Margin="0, 0, 120, 0">
+				
+				<TextBox Watermark="Übersetzung"
+						 HorizontalAlignment="Left"
+						 VerticalAlignment="Top"/>
+
+				<TextBox Watermark="Singular"
+						 HorizontalAlignment="Right"
+						 VerticalAlignment="Top"/>
+
+				<TextBox Watermark="Artikel"
+						 HorizontalAlignment="Left"
+						 VerticalAlignment="Bottom"/>
+
+				<TextBox Watermark="Plural"
+						 HorizontalAlignment="Right"
+						 VerticalAlignment="Bottom"/>
+			</Grid>
+		</Grid>
 	</Border>
 
 </Window>

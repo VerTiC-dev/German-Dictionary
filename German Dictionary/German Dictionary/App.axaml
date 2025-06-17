@@ -1,10 +1,43 @@
-<Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="German_Dictionary.App"
-             RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+<Application xmlns="https://github.com/avaloniaui"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+             x:Class="German_Dictionary.App"  
+             RequestedThemeVariant="Default">  
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->  
 
-    <Application.Styles>
+    <Application.Styles>  
         <FluentTheme />
-    </Application.Styles>
+
+		<!-- Style for a general look of content(text) in buttons and labels -->
+		<Style Selector="Label,Button">
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="Cordia New"/>
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="FontWeight" Value="DemiBold"/>
+		</Style>
+
+		<!-- Styles for textboxes -->
+		<Style Selector="TextBox">
+			<Setter Property="CornerRadius" Value="50"/>
+			<Setter Property="FontFamily" Value="Cordia New"/>
+			<Setter Property="FontSize" Value="18"/>
+			<Setter Property="FontWeight" Value="DemiBold"/>
+			<Setter Property="TextAlignment" Value="Center"/>
+			<Setter Property="Width" Value="150"/>
+			<Setter Property="Height" Value="40"/>
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="Background" Value="White"/>
+			<Setter Property="CaretBrush" Value="Black"/>
+		</Style>
+		<Style Selector="TextBox:pointerover/template/Border,TextBox:focus/template/Border">
+			<Setter	Property="Background" Value="White"/>
+			<Setter Property="BorderBrush" Value="DodgerBlue"/>
+			<Setter Property="CornerRadius" Value="50"/>
+		</Style>
+		<Style Selector="TextBox:pointerover,TextBox:focus">
+			<Setter Property="Foreground" Value="Black"/>
+		</Style>
+		<!-- Styles for textboxes -->
+
+	</Application.Styles>  
 </Application>
