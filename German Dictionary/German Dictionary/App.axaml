@@ -2,9 +2,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
              x:Class="German_Dictionary.App"  
              RequestedThemeVariant="Default">  
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->  
-
-    <Application.Styles>  
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+	
+	
+	<!-- Part of code for changing the color of buttons (snippet)
+	
+	<Button.Styles>
+		<Style Selector="Button:pointerover/template/ContentPresenter">
+			<Setter Property="Background" Value="PaleGreen"/>
+		</Style>
+		<Style Selector="Button:pressed/template/ContentPresenter">
+			<Setter Property="Background" Value="LightGreen"/>
+		</Style>
+	</Button.Styles> 
+	-->
+	
+	<Application.Styles>  
         <FluentTheme />
 
 		<!-- Style for a general look of content(text) in buttons and labels -->

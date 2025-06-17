@@ -48,8 +48,17 @@
 					FontSize="15"
 					HorizontalAlignment="Right"
 					VerticalAlignment="Center"
-					Background="PaleGreen"
-					Margin="45"/>
+					Background="SpringGreen"
+					Margin="45">
+				<Button.Styles>
+					<Style Selector="Button:pointerover/template/ContentPresenter">
+						<Setter Property="Background" Value="PaleGreen"/>
+					</Style>
+					<Style Selector="Button:pressed/template/ContentPresenter">
+						<Setter Property="Background" Value="LightGreen"/>
+					</Style>
+				</Button.Styles> 
+			</Button>
 
 			<Button Grid.Row="2"
 					Content="Prüfung"
@@ -57,7 +66,16 @@
 					FontSize="35"
 					HorizontalAlignment="Center"
 					VerticalAlignment="Top"
-					Background="DodgerBlue"/>
+					Background="DodgerBlue">
+				<Button.Styles>
+					<Style Selector="Button:pointerover/template/ContentPresenter">
+						<Setter Property="Background" Value="RoyalBlue"/>
+					</Style>
+					<Style Selector="Button:pressed/template/ContentPresenter">
+						<Setter Property="Background" Value="SteelBlue"/>
+					</Style>
+				</Button.Styles>
+			</Button>
 			
 		</Grid>
 	</Border>
