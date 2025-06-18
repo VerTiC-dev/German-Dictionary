@@ -13,6 +13,50 @@
 			PointerPressed="Border_PointerPressed">
 		
 		<Grid RowDefinitions="*,2*,*">
+
+			<!-- Close button -->
+			<Button Content="X" 
+					Width="25" Height="25"
+					FontSize="10"
+					FontWeight="Bold"
+					Foreground="DarkRed"
+					Background="Red"
+					VerticalAlignment="Top"
+					HorizontalAlignment="Right"
+					Margin="0,17"
+					Click="ButtonExit_Click">
+				<Button.Styles>
+					<Style Selector="Button:pointerover/template/ContentPresenter">
+						<Setter Property="Background" Value="Coral"/>
+					</Style>
+					<Style Selector="Button:pressed/template/ContentPresenter">
+						<Setter Property="Background" Value="Tomato"/>
+					</Style>
+				</Button.Styles>
+			</Button>
+
+			<!-- Minimize button -->
+            <Button Content="—"
+					Width="25" Height="25"  
+                    FontSize="8"  
+                    FontWeight="ExtraBold"  
+                    Foreground="OrangeRed"  
+                    Background="Yellow"  
+                    VerticalAlignment="Top"  
+                    HorizontalAlignment="Right"  
+                    Margin="17,0"
+					Click="ButtonMinimize_Click">
+				<Button.Styles>
+					<Style Selector="Button:pointerover/template/ContentPresenter">
+						<Setter Property="Background" Value="Gold"/>
+						<Setter Property="Foreground" Value="Black"/>
+					</Style>
+					<Style Selector="Button:pressed/template/ContentPresenter">
+						<Setter Property="Background" Value="Goldenrod"/>
+						<Setter Property="Foreground" Value="Black"/>
+					</Style>
+				</Button.Styles>
+            </Button>
 			
 			<Label Grid.Row="0"
 				   Width="140" Height="70"

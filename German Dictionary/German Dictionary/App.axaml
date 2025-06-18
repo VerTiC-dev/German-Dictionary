@@ -4,7 +4,6 @@
              RequestedThemeVariant="Default">  
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 	
-	
 	<!-- Part of code for changing the color of buttons (snippet)
 	
 	<Button.Styles>
