@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         x:Class="German_Dictionary.MainWindow"
 		Title="Wörterbuch"
+		WindowStartupLocation="CenterScreen"
 		Width="600" Height="380"
 		Background="Transparent"
 		SystemDecorations="None">
