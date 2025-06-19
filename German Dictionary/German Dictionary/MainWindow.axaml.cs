@@ -7,6 +7,8 @@ namespace German_Dictionary
         public MainWindow()
         {
             InitializeComponent();
+
+            ButtonAdd.IsEnabled = false; // Disable the Add button initially
         }
 
         /// <summary>

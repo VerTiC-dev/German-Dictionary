@@ -49,11 +49,16 @@
 		<Style Selector="TextBox:pointerover,TextBox:focus">
 			<Setter Property="Foreground" Value="Black"/>
 		</Style>
-		<!-- Styles for textboxes -->
 
 		<!-- Styles for rounded buttons -->
 		<Style Selector="Button">
 			<Setter Property="CornerRadius" Value="50"/>
+		</Style>
+
+		<!-- Style for disabled buttons -->
+		<Style Selector="Button:disabled/template/ContentPresenter">
+			<Setter Property="Background" Value="Silver"/>
+			<Setter Property="Foreground" Value="Gray"/>
 		</Style>
 
 	</Application.Styles>  
