@@ -1,4 +1,6 @@
 using Avalonia.Controls;
+using Avalonia.Threading;
+using System.Threading.Tasks;
 
 namespace German_Dictionary
 {
@@ -25,5 +27,24 @@ namespace German_Dictionary
         /// Function to handle the minimize button click event to change the window state to minimized.
         /// </summary>
         private void ButtonMinimize_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) => this.WindowState = WindowState.Minimized;
+
+        /// <summary>
+        /// Function to determine button enable state based on the input fields.
+        /// </summary>
+        /// <returns></returns>
+        private bool IsButtonAddEnabled()
+        {
+            // Check if all required fields are filled
+            return !string.IsNullOrEmpty(Translation.Text) &&
+                   !string.IsNullOrEmpty(Singular.Text) &&
+                   !string.IsNullOrEmpty(Plural.Text) &&
+                   !string.IsNullOrEmpty(Article.Text) && Article.Text.Length == 3; // Assuming Article should be exactly 3 characters long
+        }
+
+        // Functions to handle text changes in the input fields
+        private void TranslationTextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e) => ButtonAdd.IsEnabled = IsButtonAddEnabled();
+        private void SingularTextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e) => ButtonAdd.IsEnabled = IsButtonAddEnabled();
+        private void PluralTextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e) => ButtonAdd.IsEnabled = IsButtonAddEnabled();
+        private void ArticleTextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e) => ButtonAdd.IsEnabled = IsButtonAddEnabled();
     }
 }

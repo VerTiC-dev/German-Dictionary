@@ -71,23 +71,31 @@
 				  Height="120"
 				  Margin="0, 0, 130, 0">
 				
-				<TextBox Watermark="Übersetzung"
+				<TextBox Name="Translation"
+						 Watermark="Übersetzung"
 						 HorizontalAlignment="Left"
-						 VerticalAlignment="Top"/>
+						 VerticalAlignment="Top"
+						 TextChanged="TranslationTextBox_TextChanged"/>
 
-				<TextBox Watermark="Singular"
+				<TextBox Name="Singular"
+						 Watermark="Singular"
 						 HorizontalAlignment="Right"
-						 VerticalAlignment="Top"/>
+						 VerticalAlignment="Top"
+						 TextChanged="SingularTextBox_TextChanged"/>
 
-				<TextBox Watermark="Artikel"
+				<TextBox Name="Article"
+						 Watermark="Artikel"
 						 HorizontalAlignment="Left"
 						 VerticalAlignment="Bottom"
-						 MaxLength="3"/>
+						 MaxLength="3"
+						 TextChanged="PluralTextBox_TextChanged"/>
 						 
 
-				<TextBox Watermark="Plural"
+				<TextBox Name="Plural"
+						 Watermark="Plural"
 						 HorizontalAlignment="Right"
-						 VerticalAlignment="Bottom"/>
+						 VerticalAlignment="Bottom"
+						 TextChanged="ArticleTextBox_TextChanged"/>
 			</Grid>
 			
 			<!-- Words add button -->
@@ -111,7 +119,8 @@
 			</Button>
 
 			<!-- Word knowledge test button -->
-			<Button Grid.Row="2"
+			<Button Name="WKTButton"
+					Grid.Row="2"
 					Content="Prüfung"
 					Width="300" Height="70"
 					FontSize="35"
