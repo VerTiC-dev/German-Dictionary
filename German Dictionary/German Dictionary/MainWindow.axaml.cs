@@ -1,6 +1,4 @@
 using Avalonia.Controls;
-using Avalonia.Threading;
-using System.Threading.Tasks;
 
 namespace German_Dictionary
 {
@@ -31,7 +29,6 @@ namespace German_Dictionary
         /// <summary>
         /// Function to determine button enable state based on the input fields.
         /// </summary>
-        /// <returns></returns>
         private bool IsButtonAddEnabled()
         {
             // Check if all required fields are filled
@@ -46,5 +43,21 @@ namespace German_Dictionary
         private void SingularTextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e) => ButtonAdd.IsEnabled = IsButtonAddEnabled();
         private void PluralTextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e) => ButtonAdd.IsEnabled = IsButtonAddEnabled();
         private void ArticleTextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e) => ButtonAdd.IsEnabled = IsButtonAddEnabled();
+
+        /// <summary>
+        /// Function to handle the Add button click event to add a new word to the dictionary.
+        /// </summary>
+        private void ButtonAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            // func logic to add the word to the dictionary
+        }
+
+        /// <summary>
+        /// Function to handle the WKT button click event to open a new window for WKT (Word knowledge test).
+        /// </summary>
+        private void WKTButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            // func logic to open a new window for WKT
+        }
     }
 }

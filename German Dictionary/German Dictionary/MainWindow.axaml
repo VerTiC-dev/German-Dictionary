@@ -107,7 +107,8 @@
 					HorizontalAlignment="Right"
 					VerticalAlignment="Center"
 					Background="SpringGreen"
-					Margin="45">
+					Margin="45"
+					Click="ButtonAdd_Click">
 				<Button.Styles>
 					<Style Selector="Button:pointerover/template/ContentPresenter">
 						<Setter Property="Background" Value="PaleGreen"/>
@@ -126,7 +127,8 @@
 					FontSize="35"
 					HorizontalAlignment="Center"
 					VerticalAlignment="Top"
-					Background="DodgerBlue">
+					Background="DodgerBlue"
+					Click="WKTButton_Click">
 				<Button.Styles>
 					<Style Selector="Button:pointerover/template/ContentPresenter">
 						<Setter Property="Background" Value="RoyalBlue"/>
