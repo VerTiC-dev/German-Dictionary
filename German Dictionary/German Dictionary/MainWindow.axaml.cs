@@ -8,6 +8,7 @@ namespace German_Dictionary
         {
             InitializeComponent();
 
+            // WKTButton.IsEnabled = (func to check if WKT is available) and change the buttons text accordingly
             ButtonAdd.IsEnabled = false; // Disable the Add button initially
         }
 
@@ -50,6 +51,8 @@ namespace German_Dictionary
         private void ButtonAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             // func logic to add the word to the dictionary
+
+            // this button shuold have a func that will change WKTButton text accordingly to a count of words in the dictionary
         }
 
         /// <summary>
