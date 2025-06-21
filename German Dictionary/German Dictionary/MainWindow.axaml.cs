@@ -20,7 +20,12 @@ namespace German_Dictionary
         /// <summary>
         /// Function to handle the exit button click event to close the application.
         /// </summary>
-        private void ButtonExit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
+        private void ButtonExit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) => this.Close();
+
+        /// <summary>
+        /// Event handler that ensures that the program will terminate gracefully if the window is closed.
+        /// </summary>
+        private void Window_Closing(object? sender, Avalonia.Controls.WindowClosingEventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
 
         /// <summary>
         /// Function to handle the minimize button click event to change the window state to minimized.
@@ -50,9 +55,10 @@ namespace German_Dictionary
         /// </summary>
         private void ButtonAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            // func logic to add the word to the dictionary
-
-            // this button shuold have a func that will change WKTButton text accordingly to a count of words in the dictionary
+            NotificationWindow notificationWindow = new(); // not finished
+            notificationWindow.Show();
+            // else: func logic to add the word to the dictionary
+            // this button shoudld have a func that will change WKTButton text accordingly to a count of words in the dictionary
         }
 
         /// <summary>

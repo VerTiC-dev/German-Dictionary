@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="German_Dictionary.NotificationWindow"
+        Title="Wörterbuch"
+		WindowStartupLocation="CenterScreen"
+		Topmost="True"
+		Width="300" Height="200"
+		Background="Transparent"
+		SystemDecorations="None">
+	
+	<Border Background="DeepSkyBlue"
+			CornerRadius="80">
+		
+		<Grid RowDefinitions="2*,1*">
+			
+			<Button Grid.Row="1"
+					Width="60" Height="35"
+					Content="OK"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Background="SpringGreen"
+					Click="ButtonOK_Click">
+				<Button.Styles>
+					<Style Selector="Button:pointerover/template/ContentPresenter">
+						<Setter Property="Background" Value="PaleGreen"/>
+					</Style>
+					<Style Selector="Button:pressed/template/ContentPresenter">
+						<Setter Property="Background" Value="LightGreen"/>
+					</Style>
+				</Button.Styles>
+			</Button>
+
+			
+			
+			<TextBlock/>
+			
+			
+			
+		</Grid>
+	</Border>
+</Window>
