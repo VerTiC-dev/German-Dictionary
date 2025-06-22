@@ -17,7 +17,8 @@
 		<Grid RowDefinitions="*,2*,*">
 
 			<!-- Close button -->
-			<Button Content="X" 
+			<Button Classes="SysButton"
+					Content="X" 
 					Width="25" Height="25"
 					FontSize="10"
 					FontWeight="Bold"
@@ -38,7 +39,8 @@
 			</Button>
 
 			<!-- Minimize button -->
-            <Button Content="—"
+            <Button Classes="SysButton"
+					Content="—"
 					Width="25" Height="25"  
                     FontSize="8"  
                     FontWeight="ExtraBold"  

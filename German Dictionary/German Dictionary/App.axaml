@@ -55,10 +55,15 @@
 			<Setter Property="CornerRadius" Value="50"/>
 		</Style>
 
-		<!-- Style for disabled buttons -->
+		<!-- General style for disabled buttons -->
 		<Style Selector="Button:disabled/template/ContentPresenter">
 			<Setter Property="Background" Value="Silver"/>
 			<Setter Property="Foreground" Value="Gray"/>
+		</Style>
+
+		<Style Selector="Button:disabled.SysButton/template/ContentPresenter">
+			<Setter Property="Background" Value="{TemplateBinding Background}"/>
+			<Setter Property="Foreground" Value="{TemplateBinding Foreground}"/>
 		</Style>
 
 	</Application.Styles>  

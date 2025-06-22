@@ -55,6 +55,7 @@ namespace German_Dictionary
         /// </summary>
         private void ButtonAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
+            this.IsEnabled = false; 
             NotificationWindow notificationWindow = new(); // not finished
             notificationWindow.Show();
             // else: func logic to add the word to the dictionary
