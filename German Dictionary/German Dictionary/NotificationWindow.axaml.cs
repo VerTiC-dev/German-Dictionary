@@ -1,16 +1,22 @@
-using System;
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 
 namespace German_Dictionary;
 
 public partial class NotificationWindow : Window
 {
-    public NotificationWindow() // here must be a parameter that determine the text of notification
+    private readonly Window _mainWindow;
+
+    public NotificationWindow(Window mianWindow, string notificationText, int fontSize)
     {
         InitializeComponent();
+
+        _mainWindow = mianWindow;
+
+        this.Message.Text = notificationText;
+        this.Message.FontSize = fontSize;
     }
 
+    // Functions that close the notification window and re-enables the main window
     private void ButtonOK_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) => this.Close();
+    private void Window_Closing(object? sender, Avalonia.Controls.WindowClosingEventArgs e) => _mainWindow.IsEnabled = true;
 }

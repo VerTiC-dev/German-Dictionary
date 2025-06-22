@@ -1,4 +1,4 @@
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 
 namespace German_Dictionary
 {
@@ -55,9 +55,10 @@ namespace German_Dictionary
         /// </summary>
         private void ButtonAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            this.IsEnabled = false; 
-            NotificationWindow notificationWindow = new(); // not finished
-            notificationWindow.Show();
+            // func logic to check if the word already exists in the dictionary
+            //this.IsEnabled = false; 
+            //NotificationWindow notificationWindow = new(this, "Das Wort wurde bereits hinzugefügt!", 25); // messages: Artikel ist nicht DER, DIE oder DAS! | Das Wort wurde bereits hinzugefügt!
+            //notificationWindow.Show();
             // else: func logic to add the word to the dictionary
             // this button shoudld have a func that will change WKTButton text accordingly to a count of words in the dictionary
         }
