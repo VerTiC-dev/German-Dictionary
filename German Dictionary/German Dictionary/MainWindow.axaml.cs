@@ -20,12 +20,7 @@ namespace German_Dictionary
         /// <summary>
         /// Function to handle the exit button click event to close the application.
         /// </summary>
-        private void ButtonExit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) => this.Close();
-
-        /// <summary>
-        /// Event handler that ensures that the program will terminate gracefully if the window is closed.
-        /// </summary>
-        private void Window_Closing(object? sender, Avalonia.Controls.WindowClosingEventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
+        private void ButtonExit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
 
         /// <summary>
         /// Function to handle the minimize button click event to change the window state to minimized.
@@ -56,7 +51,7 @@ namespace German_Dictionary
         private void ButtonAdd_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             // func logic to check if the word already exists in the dictionary
-            //this.IsEnabled = false; 
+            //this.IsEnabled = false;
             //NotificationWindow notificationWindow = new(this, "Das Wort wurde bereits hinzugefügt!", 25); // messages: Artikel ist nicht DER, DIE oder DAS! | Das Wort wurde bereits hinzugefügt!
             //notificationWindow.Show();
             // else: func logic to add the word to the dictionary

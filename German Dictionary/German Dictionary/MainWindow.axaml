@@ -7,8 +7,7 @@
 		WindowStartupLocation="CenterScreen"
 		Width="600" Height="380"
 		Background="Transparent"
-		SystemDecorations="None"
-		Closing="Window_Closing">
+		SystemDecorations="None">
 
 	<Border Background="SkyBlue"
 			CornerRadius="100"
